@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sakura.css/css/sakura.css" type="text/css">
+    <style>
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            font-size: 1.5rem;
+            margin: 10px 0;
+            box-sizing: border-box;
+            text-align: center;
+        }
+
+        input[type="number"], button {
+            padding: 10px;
+            font-size: 2rem;
+            cursor: pointer;
+        }
+
+        h1 {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Random Password Generator</h1>
+    <form method="get" action="/">
+        <input type="text" id="generated-password" name="generated-password" value="{{.Password}}" readonly>
+        <input type="number" id="length" name="length" value="{{.Length}}" min="4" max="64">
+        <button type="submit">Generate Password</button>
+    </form>
+</body>
+</html>
+
